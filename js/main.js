@@ -86,8 +86,8 @@ const sr_left = ScrollReveal({ origin: "left", distance: "50px", duration: 2500 
 sr_left.reveal(".home__social");
 const sr_bottom = ScrollReveal({ origin: "bottom", distance: "50px", duration: 2500 });
 sr_bottom.reveal(".home__scroll"), ScrollReveal().reveal(".section__title", { duration: 2e3, delay: 300 }), ScrollReveal().reveal(".section__subtitle", { duration: 2500, delay: 400 }), ScrollReveal().reveal(".about__container", { duration: 2e3, delay: 400 }), ScrollReveal().reveal(".skills__container", { duration: 2e3, delay: 50 }), ScrollReveal().reveal(".qualification__container", { duration: 2e3, delay: 50 }), ScrollReveal().reveal(".certification__container", { duration: 2e3, delay: 50 }), ScrollReveal().reveal(".projects__container", { duration: 2e3, delay: 50 }), ScrollReveal().reveal(".blog__container", { duration: 2e3, delay: 50 }), ScrollReveal().reveal(".contact__container", { duration: 2e3, delay: 50 });
-const typed_home = new Typed("#multiple-text", { strings: ["Full Stack Developer", "Counsellor @VTG", "Designer @iTMG", "Data Analyst"], typeSpeed: 100, backSpeed: 30, backDelay: 1e3, loop: !0 }),
-    typed_footer = new Typed("#multiple-text-footer", { strings: ["Full Stack Developer", "Counsellor @VTG", "Designer @iTMG", "Data Analyst"], typeSpeed: 100, backSpeed: 30, backDelay: 1e3, loop: !0 });
+const typed_home = new Typed("#multiple-text", { strings: ["Web Developer","Photographer", "Video Editor"], typeSpeed: 100, backSpeed: 30, backDelay: 1e3, loop: !0 }),
+    typed_footer = new Typed("#multiple-text-footer", { strings: ["Web Developer","Photographer" ,"Video Editor"], typeSpeed: 100, backSpeed: 30, backDelay: 1e3, loop: !0 });
 
 
 window.addEventListener('load', () => {
@@ -189,41 +189,4 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(type, 1000);
 });
 
-// Initialize the Swiper slider for testimonials with autoplay
-var testimonialsSwiper = new Swiper('.testimonials__container', {
-    autoplay: {
-        delay: 5000, // 5 seconds delay between slides
-        disableOnInteraction: false, // Resume autoplay after user interactions
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('newsletterPopup').style.display = 'block';
 
-    document.addEventListener('click', function(event) {
-        if (event.target.matches('.popup-close')) {
-            document.getElementById('newsletterPopup').style.display = 'none';
-        }
-    });
-});
-
-function showPopup() {
-    if (!localStorage.getItem('popupShown')) {
-        document.getElementById('newsletterPopup').style.display = 'block';
-        localStorage.setItem('popupShown', 'yes');
-    }
-}
-
-function closeNewsletterPopup() {
-    document.getElementById('newsletterPopup').style.display = 'none';
-}
-
-// Initially show popup
-showPopup();
